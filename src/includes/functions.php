@@ -15,19 +15,6 @@ function arrayValuesAreEmpty($array)
     return true;
 }
 
-function array_is_associative($array)
-{
-    if (is_array($array) && ! empty($array)) {
-        for ($iterator = count($array) - 1; $iterator; $iterator--) {
-            if (! array_key_exists($iterator, $array)) {
-                return true;
-            }
-        }
-        return ! array_key_exists(0, $array);
-    }
-    return false;
-}
-
 function setFields($object, array $fieldArray=null)
 {
     // helper method that allows creating objects and setting their properties based on an associative array passed as argument. Mimics functionality from PHP toolkit
